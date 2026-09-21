@@ -6,8 +6,7 @@ app = Flask(__name__)
 @app.route("/")
 def main_page():
     data = {
-        'p_time': whether.publicTimeFormatted(),
-        'title': whether.title(),
+        'title': whether.description().title(),
         'des_p_time': whether.description().publicTimeFormatted(),
         'headlineText': whether.description().headlineText(),
         'bodyText': whether.description().bodyText()

@@ -6,16 +6,13 @@ params = {'city':400040}
 
 data = requests.get(url,params=params).json()
 
-def publicTimeFormatted():
-    publicTimeFormatted = data['publicTimeFormatted']
-    return publicTimeFormatted
-
-def title():
-    title = data['title']
-    return title
-
 class description:
     description = data['description']
+
+    def title(self):
+        title = data['title']
+        return title
+
     
     def publicTimeFormatted(self):
         publicTimeFormatted = self.description['publicTimeFormatted']
