@@ -6,10 +6,12 @@ app = Flask(__name__)
 @app.route("/")
 def main_page():
     data = {
-        'title': whether.description().title(),
+        'title': whether.title(),
         'des_p_time': whether.description().publicTimeFormatted(),
         'headlineText': whether.description().headlineText(),
-        'bodyText': whether.description().bodyText()
+        'bodyText': whether.description().bodyText(),
+        'cp_title': whether.copyright().title(),
+        'cp_image': whether.copyright().image()
     }
     return render_template("index.html", **data)
 

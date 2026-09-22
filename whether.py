@@ -6,14 +6,13 @@ params = {'city':400040}
 
 data = requests.get(url,params=params).json()
 
-class description:
-    description = data['description']
-
-    def title(self):
+def title():
         title = data['title']
         return title
 
-    
+class description:
+    description = data['description']
+
     def publicTimeFormatted(self):
         publicTimeFormatted = self.description['publicTimeFormatted']
         return publicTimeFormatted
@@ -29,3 +28,20 @@ class description:
         if bodyText == "":
             bodyText = "概況文無し"
         return bodyText
+
+class copyright:
+    copyright = data['copyright']
+
+    def title(self):
+        title = self.copyright['title']
+        return title
+
+    def link(self):
+        link = self.copyright['link']
+        return link
+
+    def image(self):
+        image = self.copyright['image']
+        return image
+
+    
