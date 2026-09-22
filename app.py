@@ -14,4 +14,4 @@ def main_page():
     return render_template("index.html", **data)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
